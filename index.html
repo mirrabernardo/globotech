@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
 
     </style>
 </head>
+
 <body>
     <!-- Cabeçalho -->
     <header style="background-color: rgb(243, 161, 226); padding: 15px;">
@@ -22,8 +24,18 @@
         </nav>
     </header>
 
+    <section id="intro" style="background-color: rgb(255, 174, 127); padding: 15px;">
+        <h1>Cardápio Digital de Doces</h1>
+        <p>
+            Bem-vindo ao nosso cardápio digital! Aqui você encontra uma seleção de doces
+            tradicionais brasileiros e franceses, cada um com descrição, preço e informações
+            simples para ajudar na sua escolha.
+        </p>
+    </section>
+
+
     <!-- Seção de produtos -->
-    <section id="doces" style="background-color: rgb(255, 174, 127); padding: 15px;">
+    <section id="doces" style="background-color: rgb(243, 161, 226); padding: 15px;">
         <h2>Nossos Doces</h2>
         <article>
             <h3>Pudim</h3>
@@ -48,7 +60,8 @@
         <article>
             <h3>Petit gâteau</h3>
             <img src="image/petit.png" alt="petit">
-            <p>O nosso petit gâteau, macio por fora e com recheio de chocolate quente que transborda de sabor, servido com sorvete cremoso para um contraste irresistível.</p>
+            <p>O nosso petit gâteau, macio por fora e com recheio de chocolate quente que transborda de sabor, servido
+                com sorvete cremoso para um contraste irresistível.</p>
         </article>
         <article>
             <h3>Macarons</h3>
@@ -60,13 +73,83 @@
             <img src="image/eclair.png" alt="cocada">
             <p>A nossa éclair, massa leve e elegante com recheio cremoso e cobertura de chocolate com morangos.</p>
         </article>
+    </section>
 
+    <section id="tabela-precos" style="background-color: rgb(255, 174, 127); padding: 15px;">
+        <h2>Tabela de preços</h2>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Região</th>
+                    <th>Doce</th>
+                    <th>Tipo</th>
+                    <th>Preço</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Brasileiro</td>
+                    <td>Cocada</td>
+                    <td>Unidade</td>
+                    <td>R$ 8,00</td>
+                    <td>Doce de coco cremoso, clássico das festas.</td>
+                </tr>
+                <tr>
+                    <td>Brasileiro</td>
+                    <td>Doce de Leite</td>
+                    <td>Kg</td>
+                    <td>R$ 36,00</td>
+                    <td>Sobremesa macia com calda de caramelo.</td>
+                </tr>
+                <tr>
+                    <td>Brasileiro</td>
+                    <td>Pudim</td>
+                    <td>Fatia</td>
+                    <td>R$ 7,00</td>
+                    <td>Sobremesa cremosa de leite, coberta por calda de caramelo.</td>
+                </tr>
+                <tr>
+                    <td>Brasileiro</td>
+                    <td>Quindim</td>
+                    <td>Unidade</td>
+                    <td>R$ 6,00</td>
+                    <td>Doce dourado de coco e gemas, com textura macia e brilhante.</td>
+                </tr>
+                <tr>
+                    <td>Francês</td>
+                    <td>Éclair</td>
+                    <td>Unidade</td>
+                    <td>R$ 19,00</td>
+                    <td>Massa leve recheada com creme, finalizada com cobertura de chocolate.</td>
+                </tr>
+                <tr>
+                    <td>Francês</td>
+                    <td>Macaron</td>
+                    <td>Unidade</td>
+                    <td>R$ 9,00</td>
+                    <td>Biscoito delicado com recheio suave.</td>
+                </tr>
+                <tr>
+                    <td>Francês</td>
+                    <td>Petit Gâteau</td>
+                    <td>Unidade</td>
+                    <td>R$ 16,00</td>
+                    <td>Bolo quente com recheio de chocolate.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 12px;">
+            * Valores sujeitos a alteração.
+        </p>
     </section>
 
     <!-- Seção Sobre -->
     <section id="sobre" style="background-color: rgb(243, 161, 226); padding: 15px;">
         <h2>Sobre Nós</h2>
-        <p>A Doceria Globotech é apaixonada por sabores e tradição. Produzimos doces artesanais com receitas que atravessam gerações.</p>
+        <p>A Doceria Globotech é apaixonada por sabores e tradição. Produzimos doces artesanais com receitas que
+            atravessam gerações.</p>
     </section>
 
     <!-- Seção Fale Conosco -->
@@ -98,4 +181,5 @@
         <p>&copy; 2025 - Doceria Globotech</p>
     </footer>
 </body>
+
 </html>
