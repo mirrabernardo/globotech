@@ -2,82 +2,293 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doceria Globotech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
     <style>
 
+        * {
+            box-sizing: border-box; 
+        }
+
+        :root{
+            --rosa:#f3a1e2;
+            --pessego:#ffb991;
+            --marrom:#5b3a29;
+            --creme:#fff7f1;
+            --ink:#2b2b2b;
+            --bg:#fff;
+            --radius:16px;
+        }
+
+        header h1{
+            display: flex;
+            padding: 0px;
+            margin: 10px;
+            justify-content: center;     
+            font-family: "Qwitcher Grypen", cursive;
+            font-size: 130px;
+            font-style: normal;
+        }
+
+        body{
+            margin:0;
+            color: var(--ink);
+            background: var(--creme);
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+        }
+
+        a, ul{
+            color: var(--pessego);
+            list-style:none;
+            display:flex;
+            gap:15px;
+            padding:0;
+            margin:0;
+        }
+
+        .obs {
+            font-size: 15px;
+            font-style: italic;
+            text-align: center;
+        }
+
+        h2 {
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--marrom);
+        }
+
+        section {
+            min-height: 100vh;
+        }
+        /* Nav */
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a{
+            text-decoration:none;
+            color:#000;
+            padding:6px 10px;
+            border-radius:10px;
+        }
+
+        nav a:hover{ 
+            background:var(--rosa); 
+            cursor: pointer;
+            color: var(--creme);
+        } 
+        
+        button {
+            border-radius: var(--radius);
+            padding: 4px;
+            color: var(--marrom);
+            border-color: var(--creme);
+            cursor: pointer;
+        }
+        /* Header */
+
+        .cabecalho {
+            background-color: var(--pessego);
+            color: var(--marrom);
+            width: 100%;
+            padding: 20px 50px; 
+        }
+
+        /* Nossos Doces */
+        .doces {
+            padding: 0px 20px;
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .doces img {
+            border-radius: var(--radius);
+            max-width:300px;
+            height:auto; 
+            display:block;
+        }
+
+        .doce-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background-color: var(--bg);
+            padding: 15px;
+            border-radius: var(--radius);
+            color: var(--marrom);
+            margin: 8px;
+
+        }
+         /* Tabela */
+        table {
+                width: 60%;
+                margin: 0 auto;
+                border-collapse: collapse;
+                min-width: 560px;
+                }
+
+        thead th{ 
+            background:#fff4fb; 
+        }
+        th, td{ 
+            border:1px solid #ddd; 
+            padding:10px; 
+            text-align:left; 
+        }
+
+        /* Cadastro */
+
+        .cadastro {
+            padding: 0px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #cadastro p {
+            text-align: center;
+        }
+
+        input, select, textarea {
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        form {
+            background-color: var(--bg);
+            padding: 15px;
+            border-radius: var(--radius);
+            color: var(--marrom);
+            margin: 8px;
+            max-width: 45%;
+
+        }
+
+     
+        
+        /* Sobre */
+
+        .sobre {
+            padding: 0px 30px;
+            display: flex;
+            gap: 15px;
+        }
+       .text-sobre, .image-sobre {
+        width: 50%;
+        padding: 30px;
+       }
+        .sobre img {
+            width: 80%;
+        }
+
+        .sobre p {
+            text-align: justify;
+        }
+        footer {
+            display: flex;
+            justify-content: center;
+        }
 
     </style>
+
 </head>
 
 <body>
     <!-- Cabeçalho -->
-    <header style="background-color: rgb(243, 161, 226); padding: 15px;">
+    <header>
         <h1>Doceria Globotech</h1>
         <nav>
-            <ul>
-                <li><a href="#doces">Doces</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#fale-conosco">Fale Conosco</a></li>
-            </ul>
+            <div class="menu">
+                <ul>
+                    <li><a href="#doces">Doces</a></li>
+                    <li><a href="#precos">Preços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cadastro">Cadastro</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-
-    <section id="intro" style="background-color: rgb(255, 174, 127); padding: 15px;">
-        <h1>Cardápio Digital de Doces</h1>
-        <p>
-            Bem-vindo ao nosso cardápio digital! Aqui você encontra uma seleção de doces
-            tradicionais brasileiros e franceses, cada um com descrição, preço e informações
-            simples para ajudar na sua escolha.
-        </p>
-    </section>
-
+        <div class="cabecalho">
+            <h1>Cardápio Digital de Doces</h1>
+            <p>
+                Bem-vindo ao nosso cardápio digital! Aqui você encontra uma seleção de doces
+                tradicionais brasileiros e franceses, cada um com descrição, preço e informações
+                simples para ajudar na sua escolha.
+            </p>
+            <button>Ver cardápio</button>
+            <button>Fazer cadastro</button>
+        </div>
 
     <!-- Seção de produtos -->
-    <section id="doces" style="background-color: rgb(243, 161, 226); padding: 15px;">
+    <section id="doces">
         <h2>Nossos Doces</h2>
-        <article>
-            <h3>Pudim</h3>
-            <img src="image/pudim.png" alt="pudim">
-            <p>O nosso delicioso pudim, cremoso e coberto por calda dourada de caramelo.</p>
-        </article>
-        <article>
-            <h3>Quindim</h3>
-            <img src="image/quindim.png" alt="quindim">
-            <p>O nosso irresistível quindim, dourado, brilhante e cheio de sabor tropical.</p>
-        </article>
-        <article>
-            <h3>Doce de Leite</h3>
-            <img src="image/doce-leite.png" alt="doce de leite">
-            <p>O nosso doce de leite, macio e aveludado, feito com carinho no fogo lento.</p>
-        </article>
-        <article>
-            <h3>Cocada</h3>
-            <img src="image/cocada.png" alt="cocada">
-            <p>A nossa cocada, doce de coco envolvente que derrete no paladar.</p>
-        </article>
-        <article>
-            <h3>Petit gâteau</h3>
-            <img src="image/petit.png" alt="petit">
-            <p>O nosso petit gâteau, macio por fora e com recheio de chocolate quente que transborda de sabor, servido
-                com sorvete cremoso para um contraste irresistível.</p>
-        </article>
-        <article>
-            <h3>Macarons</h3>
-            <img src="image/macaron.png" alt="macaron">
-            <p>O nosso macaron, leve, colorido e repleto de charme francês.</p>
-        </article>
-        <article>
-            <h3>Éclair</h3>
-            <img src="image/eclair.png" alt="cocada">
-            <p>A nossa éclair, massa leve e elegante com recheio cremoso e cobertura de chocolate com morangos.</p>
-        </article>
+        <div class="doces">
+            <div class="doce-card">
+                <article>
+                    <h3>Pudim</h3>
+                    <img src="image/pudim.png" alt="pudim">
+                    <p>O nosso delicioso pudim, cremoso e coberto por calda dourada de caramelo.</p>
+                </article>
+            </div>
+            <div class="doce-card">
+                <article>
+                    <h3>Quindim</h3>
+                    <img src="image/quindim.png" alt="quindim">
+                    <p>O nosso irresistível quindim, dourado, brilhante e cheio de sabor tropical.</p>
+                </article>
+            </div> 
+            <div class="doce-card">  
+                <article>
+                    <h3>Doce de Leite</h3>
+                    <img src="image/doce-leite.png" alt="doce de leite">
+                    <p>O nosso doce de leite, macio e aveludado, feito com carinho no fogo lento.</p>
+                </article>
+            </div> 
+            <div class="doce-card">
+                <article>
+                    <h3>Cocada</h3>
+                    <img src="image/cocada.png" alt="cocada">
+                    <p>A nossa cocada, doce de coco envolvente que derrete no paladar.</p>
+                </article>
+            </div>
+            <div class="doce-card">
+                <article>
+                    <h3>Petit gâteau</h3>
+                    <img src="image/petit.png" alt="petit">
+                    <p>O nosso petit gâteau, macio por fora e com recheio de chocolate quente que transborda de sabor, servido
+                        com sorvete cremoso para um contraste irresistível.</p>
+                </article>
+            </div>
+            <div class="doce-card">
+                <article>
+                    <h3>Macarons</h3>
+                    <img src="image/macaron.png" alt="macaron">
+                    <p>O nosso macaron, leve, colorido e repleto de charme francês.</p>
+                </article>
+            </div>
+            <div class="doce-card">
+                <article>
+                    <h3>Éclair</h3>
+                    <img src="image/eclair.png" alt="cocada">
+                    <p>A nossa éclair, massa leve e elegante com recheio cremoso e cobertura de chocolate com morangos.</p>
+                </article>
+            </div>
+        </div>
+            
     </section>
 
-    <section id="tabela-precos" style="background-color: rgb(255, 174, 127); padding: 15px;">
+    <section id="precos">
         <h2>Tabela de preços</h2>
-        <table border="1" cellpadding="10" cellspacing="0">
+        <div class="precos"><table>
             <thead>
                 <tr>
                     <th>Região</th>
@@ -140,44 +351,65 @@
                 </tr>
             </tbody>
         </table>
-        <p style="font-size: 12px;">
+        <p class="obs">
             * Valores sujeitos a alteração.
-        </p>
+        </p></div>
     </section>
 
     <!-- Seção Sobre -->
-    <section id="sobre" style="background-color: rgb(243, 161, 226); padding: 15px;">
+    <section id="sobre">
         <h2>Sobre Nós</h2>
-        <p>A Doceria Globotech é apaixonada por sabores e tradição. Produzimos doces artesanais com receitas que
-            atravessam gerações.</p>
+        <div class="sobre">
+            <div class="text-sobre">
+            <p>Bem-vindo ao nosso cardápio digital! Aqui você encontra uma seleção caprichada de doces artesanais que celebram o melhor das tradições brasileira e francesa — do pudim cremoso, quindim dourado, cocada macia e doce de leite aveludado aos clássicos franceses como éclair, macarons e petit gâteau. 
+            Cada item traz foto, descrição objetiva e preço atualizado para você comparar com tranquilidade e escolher o seu preferido. Priorizamos ingredientes de qualidade, preparo cuidadoso e aquele toque de afeto que transforma cada sobremesa em uma experiência.
+            <br><br>Para facilitar sua decisão, consulte a nossa tabela de preços com opções por unidade, porção, meia dúzia e dúzia (quando disponível). Se precisar de algo especial para aniversário, reuniões ou eventos, aceitamos encomendas sob medida. No formulário de cadastro, você pode indicar preferências e possíveis alergias alimentares, além de se inscrever para receber ofertas, lançamentos e novidades da Doceria Globotech. Fique à vontade para explorar, salvar seus favoritos e falar com a gente — será um prazer adoçar o seu dia!
+            atravessam gerações.</p></div>
+            <div class="image-sobre">
+            <img src="image/doceria.png" alt="doceria"></div>
+        </div>
     </section>
 
-    <!-- Seção Fale Conosco -->
-    <section id="fale-conosco" style="background-color: rgb(255, 174, 127); padding: 15px;">
-        <h2>Fale Conosco</h2>
+    <!-- Seção cadastro -->
+    <section id="cadastro">
+        <h2>Cadastro de Cliente</h2>
+        <p>Cadastre-se para receber novidades, promoções e encomendar diretamente pelo site.</p>
+        <div class="cadastro">
+        
         <form action="" method="get">
             <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome"><br><br>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome"  size="40px"><br><br>
 
             <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" placeholder="seunome@email.com"><br><br>
+            <input type="email" id="email" name="email" placeholder="seunome@email.com" size="40px"><br><br>
 
+            <label for="telefone">Telefone</label><br>
+            <input id="telefone" name="telefone" type="tel" placeholder="(81) 90000-0000" size="40px"><br><br>
+
+            <label for="nascimento">Data de nascimento</label><br>
+            <input id="nascimento" name="nascimento" type="date" />   <br><br> 
+
+            <label for="preferido">Doce preferido</label><br>
+            <select id="preferido" name="preferido">
+            <option value="">Selecione</option>
+            <option>Pudim</option>
+            <option>Quindim</option>
+            <option>Doce de Leite</option>
+            <option>Cocada</option>
+            <option>Petit Gâteau</option>
+            <option>Macarons</option>
+            <option>Éclair</option>
+            </select><br><br>
+            
             <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite aqui sua mensagem"></textarea><br><br>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Alergias, preferências, etc." cols="31"></textarea><br><br>
 
-            <button type="submit">Enviar</button>
-        </form>
+            <button type="submit">Cadastrar</button>
+        </form></div>
     </section>
 
     <!-- Rodapé -->
-    <footer style="background-color: rgb(243, 161, 226); padding: 15px;">
-        <nav>
-            <ul>
-                <li><a href="#doces">Doces</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#fale-conosco">Fale Conosco</a></li>
-            </ul>
-        </nav>
+    <footer>
         <p>&copy; 2025 - Doceria Globotech</p>
     </footer>
 </body>
